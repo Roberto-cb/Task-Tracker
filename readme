@@ -1,0 +1,58 @@
+📄 Especificación de Requisitos de Usuario: Project "FocusFlow"
+
+Descripción del Proyecto: Necesito una aplicación web para gestionar mis tareas diarias. No quiero algo complejo, pero sí algo robusto donde pueda ver qué es urgente y qué puede esperar.
+1. Requisitos Funcionales (Lo que debe hacer)
+
+    Gestión de Tareas (CRUD): * Debo poder crear una tarea con un título (obligatorio) y una descripción (opcional).
+
+        Debo poder marcar una tarea como "Completada" sin borrarla.
+
+        Debo poder editar el nombre o la prioridad después de haberla creado.
+
+        Debo poder eliminar tareas.
+
+    Sistema de Prioridades:
+
+        Cada tarea debe tener un nivel: Alta, Media o Baja.
+
+        Visualmente, quiero que se diferencien por colores (ej: Rojo para Alta, Amarillo para Media, Verde para Baja).
+
+    Ordenamiento Automático:
+
+        Las tareas de prioridad Alta siempre deben aparecer arriba de la lista.
+
+    Persistencia de Datos:
+
+        Si refresco la página o apago la computadora, las tareas no pueden desaparecer. (Aquí es donde entra tu uso de Prisma + Postgres).
+
+2. Requisitos Técnicos (Tu enfoque DevOps/Backend)
+
+Como soy un cliente que sabe de tecnología, te exijo estos estándares:
+
+    API / Backend: Node.js con TypeScript.
+
+    Base de Datos: PostgreSQL gestionado a través de Prisma ORM.
+
+    Infraestructura: * Un archivo Dockerfile para la aplicación.
+
+        Un archivo docker-compose.yml que levante la App y la Base de Datos.
+
+        Uso de variables de entorno (.env) para la conexión a la DB.
+
+    Interfaz: Un frontend sencillo (HTML/JS o React) que consuma tu API.
+
+3. Modelo de Datos Sugerido (Schema de Prisma)
+
+Para que hablemos el mismo idioma, espero que tu tabla de Task tenga esta estructura mínima:
+
+    id: Autoincremental o UUID.
+
+    title: String.
+
+    description: String (opcional).
+
+    priority: Enum o String (High, Medium, Low).
+
+    completed: Boolean (default: false).
+
+    createdAt: DateTime.
