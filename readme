@@ -1,6 +1,6 @@
 📄 Especificación de Requisitos de Usuario: Project "FocusFlow"
 
-Descripción del Proyecto: Necesito una aplicación web para gestionar mis tareas diarias. No quiero algo complejo, pero sí algo robusto donde pueda ver qué es urgente y qué puede esperar.
+Descripción del Proyecto: Una aplicación web para gestionar mis tareas diarias. No quiero algo complejo, pero sí algo robusto donde pueda ver qué es urgente y qué puede esperar.
 1. Requisitos Funcionales (Lo que debe hacer)
 
     Gestión de Tareas (CRUD): * Debo poder crear una tarea con un título (obligatorio) y una descripción (opcional).
